@@ -1,0 +1,23 @@
+{
+  "name": "personalwebsite",
+  "version": "1.0.0",
+  "description": "personal website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LindaAllen/PersonalWebsite.git"
+  },
+  "author": "Linda Allen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LindaAllen/PersonalWebsite/issues"
+  },
+  "homepage": "https://github.com/LindaAllen/PersonalWebsite#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-s3": "^0.3.0"
+  }
+}
