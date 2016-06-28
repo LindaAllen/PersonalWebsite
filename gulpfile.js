@@ -39,8 +39,13 @@ gulp.task('minify_css', function () {
         .pipe(gulp.dest('./build'));
 });
 
+gulp.task('copy_favicon', function () {
+    return gulp.src(['src/*.png', 'src/*.ico', 'src/*.svg', 'src/*.json', 'src/*.xml'])
+        .pipe(gulp.dest('./build'));     
+});
 
-gulp.task('deploy', ['gzip', 'optimize_images', 'minify_css'], function () {
+
+gulp.task('deploy', ['gzip', 'optimize_images', 'minify_css', 'copy_favicon'], function () {
     var aws = JSON.parse(fs.readFileSync('./aws.json')),
         options = { headers: {'Cache-Control': 'max-age=315360000, no-transform, public'} };
     gulp.src('./build/**', {read: true, dot: true})
