@@ -26,5 +26,8 @@
     "gulp-s3": "^0.3.0",
     "gulp-s3-gzip": "^0.3.2",
     "gulp-webserver": "^0.9.1"
+  },
+  "devDependencies": {
+    "gulp-gh-pages": "^0.5.4"
   }
 }

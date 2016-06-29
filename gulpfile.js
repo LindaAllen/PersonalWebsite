@@ -1,3 +1,4 @@
+
 var gulp = require('gulp'),
     fs = require('fs'),
     s3 = require("gulp-s3-gzip"),
@@ -8,6 +9,12 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     cleanCSS = cleanCSS = require('gulp-clean-css');
 
+var ghPages = require('gulp-gh-pages');
+ 
+gulp.task('pages', function() {
+  return gulp.src('./build/**/*')
+    .pipe(ghPages());
+});
 
 
 gulp.task('prettify', function() {
